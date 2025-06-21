@@ -1,20 +1,4 @@
-    body {
-      background: #f0f0f0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 50px;
-      font-size: 14px;
-      display: flex;
-      justify-content: center;
-    }
-    .btn {
-      cursor: pointer;
-      padding: 10px 20px;
-      background: #0078d4;
-      color: #fff;
-      border-radius: 4px;
-      user-select: none;
-    }
-    .xaori-window {
+.xaori-window {
       display: none;
       position: fixed;
       background: #ffffff;
