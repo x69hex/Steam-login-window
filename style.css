@@ -1,0 +1,205 @@
+    body {
+      background: #f0f0f0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 50px;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+    }
+    .btn {
+      cursor: pointer;
+      padding: 10px 20px;
+      background: #0078d4;
+      color: #fff;
+      border-radius: 4px;
+      user-select: none;
+    }
+    .xaori-window {
+      display: none;
+      position: fixed;
+      background: #ffffff;
+      width: 800px;
+      height: 700px;
+      border: 1px solid #61666f;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      flex-direction: column;
+      min-width: 400px;
+      min-height: 300px;
+    }
+    .xaori-window.resizing {
+      user-select: none;
+      transition: none !important;
+    }
+    .xaori-window.resizing .xaori-window-web iframe {
+      pointer-events: none;
+    }
+    .xaori-window-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #d3e3fd;
+      height: 30px;
+      padding: 0 0 0 10px;
+    }
+    .xaori-window-header-control {
+      display: flex;
+      align-items: center;
+      height: 30px;
+    }
+    .xaori-window-header-control-minimize,
+    .xaori-window-header-control-maximize,
+    .xaori-window-header-control-close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+      background-size: 12px !important;
+      width: 40px;
+    }
+    .xaori-window-header-control-minimize:hover,
+    .xaori-window-header-control-maximize:hover {
+      background-color: #bdcce3;
+    }
+    .xaori-window-header-control-close:hover {
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/close2.png) no-repeat center;
+      background-color: #e81123;
+    }
+    .xaori-window-header-control-minimize {
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/minimize.png) no-repeat center;
+    }
+    .xaori-window-header-control-maximize {
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/maximize.png) no-repeat center;
+    }
+    .xaori-window-header-control-close {
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/close.png) no-repeat center;
+    }
+    .xaori-window-header-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      height: 30px;
+      cursor: move;
+    }
+    .xaori-window-header-icon {
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/favicon.png) no-repeat;
+      background-size: 14px;
+      width: 15px;
+      height: 14px;
+    }
+    .xaori-window-header-text {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      color: #000000;
+      font-size: 12px;
+      width: 100%;
+      user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+    }
+    .xaori-window-address {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: #fbfbfb;
+      color: #1f1f1f;
+      font-size: 13px;
+      height: 32px;
+      padding: 0 5px;
+      border-bottom: 1px solid #b2b2b2;
+    }
+    .xaori-window-address-lock {
+    background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/lock.png) no-repeat center 3px;
+    background-color: #ffffff;
+    background-size: 114px;
+    padding: 4px;
+    width: 136px;
+    height: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    }
+    .xaori-window-address-lock:hover{
+      border: 1px solid #5c956a78;
+    }
+    .xaori-window-address-url {
+      width: 100%;
+    }
+    .xaori-window-address-url input{
+    background: #fbfbfb;
+    width: 100%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    }
+    .xaori-window-web {
+      flex: 1;
+      background: #fff;
+    }
+    .xaori-window-web iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .resize-handle {
+      position: absolute;
+      background: transparent;
+      z-index: 10;
+    }
+    .resize-handle.top {
+      top: -6px;
+      left: 6px;
+      right: 6px;
+      height: 12px;
+      cursor: ns-resize;
+    }
+    .resize-handle.bottom {
+      bottom: -6px;
+      left: 6px;
+      right: 6px;
+      height: 12px;
+      cursor: ns-resize;
+    }
+    .resize-handle.left {
+      left: -6px;
+      top: 6px;
+      bottom: 6px;
+      width: 12px;
+      cursor: ew-resize;
+    }
+    .resize-handle.right {
+      right: -6px;
+      top: 6px;
+      bottom: 6px;
+      width: 12px;
+      cursor: ew-resize;
+    }
+    .resize-handle.top-left {
+      top: -6px;
+      left: -6px;
+      width: 12px;
+      height: 12px;
+      cursor: nwse-resize;
+    }
+    .resize-handle.top-right {
+      top: -6px;
+      right: -6px;
+      width: 12px;
+      height: 12px;
+      cursor: nesw-resize;
+    }
+    .resize-handle.bottom-left {
+      bottom: -6px;
+      left: -6px;
+      width: 12px;
+      height: 12px;
+      cursor: nesw-resize;
+    }
+    .resize-handle.bottom-right {
+      bottom: -6px;
+      right: -6px;
+      width: 12px;
+      height: 12px;
+      cursor: nwse-resize;
+    }
