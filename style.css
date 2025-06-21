@@ -47,17 +47,17 @@
       background-color: #bdcce3;
     }
     .xaori-window-header-control-close:hover {
-      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/close-hover.png) no-repeat center;
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window@2b947dbb19611e9bc5fc378326c3c2477b811bb5/close-hover.png) no-repeat center;
       background-color: #e81123;
     }
     .xaori-window-header-control-minimize {
-      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/minimize.png) no-repeat center;
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window@2b947dbb19611e9bc5fc378326c3c2477b811bb5/minimize.png) no-repeat center;
     }
     .xaori-window-header-control-maximize {
-      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/maximize.png) no-repeat center;
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window@2b947dbb19611e9bc5fc378326c3c2477b811bb5/maximize.png) no-repeat center;
     }
     .xaori-window-header-control-close {
-      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window/close.png) no-repeat center;
+      background: url(https://cdn.jsdelivr.net/gh/x69hex/Steam-login-window@2b947dbb19611e9bc5fc378326c3c2477b811bb5/close.png) no-repeat center;
     }
     .xaori-window-header-title {
       display: flex;
