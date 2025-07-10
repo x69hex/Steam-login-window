@@ -1,0 +1,298 @@
+:root {
+
+--body: #edf2fa;
+--header: #d3e3fd;
+--header-hover: #bdcce3;
+--white: #fff;
+--dark: #000;
+--address: #edf2fa;
+--address-bottom: #b2b2b2;
+--address-hover: #e1e6ed;
+--address-color: #1f1f1f;
+--address-color2: #474747;
+--address-lock: #d2d9e5;
+
+@media (prefers-color-scheme: dark) {
+--body: #313131;
+--header: #1f2020;
+--header-hover: #363737;
+--white: #1f2020;
+--dark: #fff;
+--address: #282828;
+--address-bottom: #444746;
+--address-hover: #4a4a4a;
+--address-color: #e3e3e3;
+--address-color2: #c7c7c7;
+--address-lock: #505050;
+
+.xaori-window-header-control-minimize {
+background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/minimize-dark.png) no-repeat center;
+}
+.xaori-window-header-control-maximize {
+background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/maximize-dark.png) no-repeat center;
+}
+.xaori-window-header-control-close {
+background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/close-dark.png) no-repeat center;
+}
+
+}
+
+}
+
+.xaori-window {
+      display: none;
+      position: fixed;
+      z-index: 111111111111111111111;
+      background: var(--body);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      width: 800px;
+      height: 700px;
+      border: 1px solid #707070;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+      flex-direction: column;
+      min-width: 400px;
+      min-height: 300px;
+    }
+.xaori-window {
+  animation: windowsOpen 0.1s ease-out forwards;
+}
+@keyframes windowsOpen {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+    .xaori-window.resizing {
+      user-select: none;
+      transition: none !important;
+    }
+    .xaori-window.resizing .xaori-window-web iframe {
+      pointer-events: none;
+    }
+    .xaori-window-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--header);
+      height: 30px;
+      padding: 0 0 0 10px;
+    }
+    .xaori-window-header-control {
+      display: flex;
+      align-items: center;
+      height: 30px;
+    }
+    .xaori-window-header-control-minimize,
+    .xaori-window-header-control-maximize,
+    .xaori-window-header-control-close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+      background-size: 10px !important;
+      width: 40px;
+    }
+    .xaori-window-header-control-minimize:hover,
+    .xaori-window-header-control-maximize:hover {
+      background-color: var(--header-hover);
+    }
+    .xaori-window-header-control-close:hover {
+      background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/close-dark.png) no-repeat center;
+      background-color: #e81123;
+    }
+    .xaori-window-header-control-minimize {
+      background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/minimize.png) no-repeat center;
+    }
+    .xaori-window-header-control-maximize {
+      background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/maximize.png) no-repeat center;
+    }
+    .xaori-window-header-control-close {
+      background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/close.png) no-repeat center;
+    }
+    .xaori-window-header-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      height: 30px;
+      cursor: move;
+    }
+    .xaori-window-header-icon {
+      background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/favicon.png) no-repeat;
+      background-size: 14px;
+      width: 15px;
+      height: 14px;
+    }
+    .xaori-window-header-text {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      color: var(--dark);
+      font-size: 12px;
+      width: 100%;
+      user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+    }
+    .xaori-window-address {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--address);
+      color: var(--address-color);
+      font-size: 13px;
+      height: 32px;
+      padding: 0 5px;
+      border-bottom: 1px solid var(--address-bottom);
+    }
+    .xaori-window-address span{
+      color: var(--address-color2);
+    }
+    .xaori-window-address-lock {
+    background: url(https://raw.githubusercontent.com/x69hex/Steam-login-window/main/ssl.png) no-repeat center;
+    background-size: 10px;
+    background-color: var(--white);
+    width: 25px;
+    height: 22px;
+    border-radius: 50%;
+    }
+    .xaori-window-address-lock:hover{
+      background-color: var(--address-lock);
+    }
+    .xaori-window-address-url {
+    width: 100%;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+}
+.xaori-window-address:hover{
+  background: var(--address-hover);
+}
+    .xaori-window-web {
+      flex: 1;
+margin-top: 1px;
+    }
+    .xaori-window-web iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .resize-handle {
+      position: absolute;
+      background: transparent;
+      z-index: 10;
+    }
+    .resize-handle.top {
+      top: -6px;
+      left: 6px;
+      right: 6px;
+      height: 12px;
+      cursor: ns-resize;
+    }
+    .resize-handle.bottom {
+      bottom: -6px;
+      left: 6px;
+      right: 6px;
+      height: 12px;
+      cursor: ns-resize;
+    }
+    .resize-handle.left {
+      left: -6px;
+      top: 6px;
+      bottom: 6px;
+      width: 12px;
+      cursor: ew-resize;
+    }
+    .resize-handle.right {
+      right: -6px;
+      top: 6px;
+      bottom: 6px;
+      width: 12px;
+      cursor: ew-resize;
+    }
+    .resize-handle.top-left {
+      top: -6px;
+      left: -6px;
+      width: 12px;
+      height: 12px;
+      cursor: nwse-resize;
+    }
+    .resize-handle.top-right {
+      top: -6px;
+      right: -6px;
+      width: 12px;
+      height: 12px;
+      cursor: nesw-resize;
+    }
+    .resize-handle.bottom-left {
+      bottom: -6px;
+      left: -6px;
+      width: 12px;
+      height: 12px;
+      cursor: nesw-resize;
+    }
+    .resize-handle.bottom-right {
+      bottom: -6px;
+      right: -6px;
+      width: 12px;
+      height: 12px;
+      cursor: nwse-resize;
+    }
+.xaori-window-error{
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    height: 100%;
+    text-align: center;
+}
+.xaori-window-error-logo img{
+    width: 200px;
+    border-radius: 5px;
+}
+.xaori-window-error-title{
+    color: #E91E63;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.xaori-window-error-text{
+    color: #00a2e0;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.xaori-window-error-contacts-text{
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+.xaori-window-error-contacts-btn a{
+    display: inline-block;
+    background: #00a2e0;
+    color: white !important;
+    text-decoration: auto;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+
+.xaori-window{
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0!important;
+    right: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    border: none;
+}
+.xaori-window-header, .xaori-window-address{
+  display: none;
+}
+}
